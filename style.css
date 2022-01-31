@@ -1,0 +1,262 @@
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta', sans-serif;
+    display: flexbox;
+}
+html {
+    height: 100%;
+}
+body {
+    font-size: 1rem;
+    min-height: 100%;
+}
+
+/* Index */
+.titulo {
+    font-size: 4vh;
+}
+.pelota {
+    height: 100px;
+    width: 100px;
+}
+.navegadorUno {
+    margin-top: 150px;
+}
+.navegadorUno li {
+    display: inline-flex;
+    margin: 15px 10px;
+    font-size: 2vh;
+}
+.navegadorUno a {
+    text-decoration: none;
+}
+.foto {
+    height: 300px;
+    width: 300px;
+}
+.bienvenida {
+    font-size: 4vh;
+}
+.descripcion {
+    font-size: 2vh;
+}
+ .contacto {
+    border: solid white ;
+    border-radius: 20px;
+    text-decoration-line: none;
+    color: rgb(0, 0, 0);
+}
+
+.copy {
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+} 
+
+/*Historia.html*/
+.articulo{
+    color: black;
+    margin: 20px;
+    
+}
+
+.articulo h4 {
+    border-radius: 15px;
+    border: solid royalblue;
+}
+
+.articulo img {
+    margin: 25px 10px;
+}
+
+.articulo iframe {
+    margin-bottom: 25px;
+}
+
+/*Plantel.html*/
+.tabla {
+    margin-top: 150px;
+    color: black;
+    display: inline-block;
+    text-align: center;   
+}
+
+.tabla th {
+    font-size: 2.5vh;
+    padding: 25px;
+    border: 1px solid royalblue;
+    
+}
+
+.tabla td {
+    border: 1px solid royalblue;
+    font-size: 2.2vh;
+}
+
+
+/*Estadio.html*/
+.seccionEstadio {
+    color: black;
+    font-size: 20px;
+}
+
+.seccionEstadio h2, h3, p, iframe {
+    margin: 20px 0px;
+}
+
+.seccionEstadio h2, h3 {
+    font-size: 25px;
+}
+
+.estadio {
+    height: 75%;
+    width: 75%;
+}
+
+/*Formulario.html*/
+.inicio {
+    border: solid white ;
+    border-radius: 20px;
+    text-decoration-line: none;
+    color: black;
+}
+.formulario{
+    font-size: 2rem;
+    margin-top: 10%;
+}
+
+.form {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.form input {
+    background-color: #fff;       
+}
+
+.enviar {
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+/* GRIDS */
+.gridAreas > * {
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+}
+.header {
+    grid-area: header;
+    background-color: rgb(81, 231, 161);
+}
+.nav {
+    grid-area: nav;
+    background-color: rgb(179, 235, 128);
+}
+.article {
+    grid-area: article;
+    background-color: rgb(127, 255, 212);
+}
+.footer {
+    grid-area: footer;
+    background-color: rgb(107, 109, 235);
+}
+.gridAreas {
+    display: grid;
+    gap: 5px;
+    grid-template: 
+    "header header"  200px
+    "nav article"   auto
+    "footer footer" 90px /
+     175px   auto;
+}
+
+
+
+/* RESPONSIVE */
+/* tablet */
+  @media (min-width: 481px) and (max-width: 1023px){ 
+    .gridAreas {
+        display: grid;
+        gap: 5px;
+        grid-template: 
+        "header"  auto
+        "nav"   auto
+        "article" auto
+        "footer" auto /
+         100%;
+    }
+    .pelota {
+        height: 100px;
+        width: 100px;
+    }
+    .navegadorUno {
+        margin-top: 0;
+    }
+    .tabla{
+        margin-top: 0;
+    }
+    .header {
+        font-size: 3vh;
+    }
+    .video {
+        width: 75%;
+    }
+    
+}
+
+/* Smartphone */
+ @media (max-width: 480px) {
+    .gridAreas {
+        display: grid;
+        gap: 5px;
+        grid-template: 
+        "header"  auto
+        "nav"   auto
+        "article" auto
+        "footer" auto /
+         100%;
+    }
+    .titulo {
+        font-size: 2vh;
+    }
+    .navegadorUno {
+        margin-top: 0px;
+    }
+    .navegadorUno li {
+        font-size: 100%;
+    }
+    .tabla {
+        margin-top: 0px;
+    }
+    .seccionEstadio iframe {
+        width: fit-content;
+        height: fit-content;
+    }
+    .video {
+        width: 75%;
+    }
+    /* Configuración Grids cambio background color */
+    .header {
+        grid-area: header;
+        background-color: rgb(31, 95, 179);
+    }
+    .nav {
+        grid-area: nav;
+        background-color: rgb(184, 187, 182);
+    }
+    .article {
+        grid-area: article;
+        background-color: rgb(196, 59, 189);
+    }
+    .footer {
+        grid-area: footer;
+        background-color: rgb(226, 150, 63);
+    }
+} 

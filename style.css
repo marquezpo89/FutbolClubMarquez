@@ -32,6 +32,7 @@ body {
 }
 .navegadorUno a {
     text-decoration: none;
+    color: black;
 }
 .foto {
     height: 300px;
@@ -190,12 +191,25 @@ body {
     background-image: linear-gradient( 300deg, #8256e7 15%, #cc3838 50%, #353545);
 }
 
+.article {
+    background-image: linear-gradient( 300deg, #9cee8b 15%, #0a3f8f 50%, #353545);
+}
+
 /* Transicion */
 
 .navegadorUno {    
     animation-name: nav;
     animation-iteration-count: 1;/*Repeticion*/
-    animation-duration: 5s;
+    animation-duration: 3s;
+}
+
+.navegadorUno a:hover{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 25px;
+    color: brown;
+    border: #000000 solid 2px;
+    background-color: #4e1ed1;
 }
 .pelota {
     animation-name: pelota;

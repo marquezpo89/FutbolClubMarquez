@@ -21,6 +21,7 @@ body {
     height: 100px;
     width: 100px;
 }
+
 .navegadorUno {
     margin-top: 150px;
 }
@@ -178,6 +179,64 @@ body {
 }
 
 
+/* ANIMACIONES */
+/* Gradientes */
+
+.header {
+    background-image: linear-gradient( 300deg, #5aa6ec36 15%, #dbf064 50%);
+}
+
+.footer {
+    background-image: linear-gradient( 300deg, #8256e7 15%, #cc3838 50%, #353545);
+}
+
+/* Transicion */
+
+.navegadorUno {    
+    animation-name: nav;
+    animation-iteration-count: 1;/*Repeticion*/
+    animation-duration: 5s;
+}
+.pelota {
+    animation-name: pelota;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+
+}
+
+.contacto:hover {
+    width: 250px;
+    height: 250px;
+    border: #ffffff solid 10px;
+    background-color: #ffffff;
+}
+
+/* KEYFRAMES */
+@keyframes nav {
+    from/* Inicio */{
+        transform: translate(-200px);
+        opacity: 0;
+    }
+    to  /* Final */{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pelota {
+    0%/* inicio */{
+        border-radius: 50%;
+        transform: skewX(30deg);
+    }
+    50%{
+        border-radius: 30%;
+        transform: rotate(50deg);
+    }
+    100%/* FInal */{
+        border-radius: 50%;
+    }
+}
+
 
 /* RESPONSIVE */
 /* tablet */
@@ -242,21 +301,27 @@ body {
     .video {
         width: 75%;
     }
-    /* Configuración Grids cambio background color */
+
+    .copy{
+        color: #000000;
+    }
+    /* Configuración Grids cambio background color con gradientes */
     .header {
         grid-area: header;
-        background-color: rgb(31, 95, 179);
+        background-image: linear-gradient( 200deg, #c2c2c2 35%, #ffffff 60%);
     }
     .nav {
         grid-area: nav;
-        background-color: rgb(184, 187, 182);
+        background-image: linear-gradient( 175deg, #eeeeee 35%, #46ca4c 60%);
     }
     .article {
         grid-area: article;
-        background-color: rgb(196, 59, 189);
+        background-image: linear-gradient( 180deg, #ebb5b5 48%, #6c9aee 65%);
     }
     .footer {
         grid-area: footer;
-        background-color: rgb(226, 150, 63);
+        background-image: linear-gradient( 200deg, #c44c4c 35%, #ffffff 60%);
     }
 } 
+
+
